@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0105)https://universidadevli.webtraining.com.br/siga/siga_app/templates/padrao/aluno/desktop/desktop.asp?p=&v= -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>UniversidadeVLI</title>
+
+<link rel="icon" href="https://universidadevli.webtraining.com.br/siga/assets/images/cliente/favicon.png">
+
+
+<script>
+
+var itemSel = null
+
+function getItemSel() {
+   return itemSel;
+}
+function setItemSel(p_obj) {
+  itemSel= p_obj
+}
+
+function abreJanela(url,alvo,opcoes) {
+  window.open(url, alvo, opcoes);
+}
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+var URL_BUSCA = '/siga/siga_app/templates/padrao/aluno/busca/resultado.asp';
+var USUARIO_ID = '12700';
+var USUARIO_NOME = 'LUCAS ARAUJO ALFARO MACHADO';
+var USUARIO_TIPO = 'U';
+var USUARIO_GESTOR = 'False';
+var USUARIO_RPT = '';
+var URL_AGENDA = '/siga/siga_app/templates/padrao/aluno/evento/agenda.asp';
+var URL_CURSOS = '/siga/siga_app/templates/padrao/aluno/curso/cursos_todos.asp';
+var URL_EQUIPE = '/siga/siga_app/templates/padrao/aluno/equipe/default.asp';
+var URL_DASH = '/siga/siga_app/templates/padrao/aluno/dashboard/dashboard.asp';
+var URL_RELAT_GESTOR = '/siga/siga_app/templates/padrao/gestor/desktop/desktop.asp';
+
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+var API = null;
+var ehReload = false
+var _currPage = "home"
+
+// Esta Funcao ajusta a referencia para o objeto "API" utilizado nos cursos
+// deve estar sempre presente, em conjunto com o LMSSCOFrame
+
+var jswwwRoot = "/siga/"
+function initAPI() {
+   API = window.LMSSCOFrame.APIAdapter;
+}
+
+
+</script>
+<script>
+linksExtras = new Array();
+
+function CstSessao (nome, label, url, janela) {
+    this.nome = nome;
+    this.label = label;
+    this.url = url;
+    this.janela = janela;
+    this.nlinks = 0;
+    this.addLink = addLink;
+    this.arrLinks = new Array();
+}
+
+function addLink (label, url, janela) {
+    this.arrLinks[this.nlinks++] = new CstLink (label, url, janela);
+}
+
+function CstLink (label, url, janela) {
+    this.label = label;
+    this.url = url;
+    this.janela = janela;
+}
+</script>
+	
+
+<script>
+linksExtras[0] = new CstSessao ('sessaoEx0', '<img src="/siga/assets/images/icons/Home.svg"> Home', '/siga/siga_app/templates/padrao/aluno/desktop/desktop_conteudo.asp', 'M');
+linksExtras[1] = new CstSessao ('sessaoEx1', '<img src="/siga/assets/images/icons/Pencil.svg"> Autoavaliação', '/siga/siga_app/templates/padrao/aluno/avcompet/desktop_conteudo.asp', 'M');
+linksExtras[2] = new CstSessao ('sessaoEx2', '<img src="/siga/assets/images/icons/Book.svg"> Biblioteca', '/siga/siga_app/templates/padrao/aluno/porta_arquivo/biblioteca.asp?parq=1', 'M');
+linksExtras[3] = new CstSessao ('sessaoEx3', '<img src="/siga/assets/images/icons/Settings.svg"> Presenciais/Teams', '/siga/siga_app/templates/padrao/aluno/presenciais/cursos_todos.asp', 'M');
+linksExtras[4] = new CstSessao ('sessaoEx4', '<img src="/siga/assets/images/icons/Book.svg"> Cursos Online', '/siga/siga_app/templates/padrao/aluno/curso/disponiveis.asp', 'M');
+linksExtras[5] = new CstSessao ('sessaoEx5', '<img src="/siga/assets/images/icons/Pencil.svg"> Multiplicadores', '/siga/siga_app/templates/padrao/aluno/multiplicador/default.asp', 'M');
+linksExtras[6] = new CstSessao ('sessaoEx6', '<img src="/siga/assets/images/icons/Calendar.svg"> Adm Calendário', '/siga/siga_app/templates/padrao/aluno/presenciais/calendario.asp', 'M');
+linksExtras[7] = new CstSessao ('sessaoEx7', '<img src="/siga/assets/images/icons/Chart/Bars.svg"> Dashboard', 'https://app.powerbi.com/Redirect?action=OpenReport&appId=3f1b8884-fef8-4dac-af6c-aba090e74f7e&reportObjectId=0528133a-2dc2-45fe-bbd2-a56460b7bf7c&ctid=eef8f41a-1fa3-486c-9dc3-2fa5f63c9231', 'N');
+linksExtras[8] = new CstSessao ('sessaoEx8', '<img src="/siga/assets/images/icons/Book.svg"> Relatórios', '/siga/siga_app/templates/padrao/aluno/porta_arquivo/biblioteca.asp?parq=6', 'M');
+linksExtras[9] = new CstSessao ('sessaoEx9', '<img src="/siga/assets/images/icons/Star.svg"> Surpreenda-me', '/siga/siga_app/templates/padrao/aluno/recomendacao/default.asp', 'M');
+linksExtras[10] = new CstSessao ('sessaoEx10', '<img src="/siga/assets/images/icons/Download.svg"> Certificados em Lote', '/siga/siga_app/templates/padrao/aluno/certificados/index.asp', 'M');
+
+fechouPopUp = false;	
+</script>
+
+
+</head><frameset rows="*,0,0,0,0" border="0" frameborder="no" framespacing="0" allowfullscreen="">
+   <frame src="./UniversidadeVLI_files/desktop_conteudo.html" name="treinamento" marginwidth="0" marginheight="0" border="0" frameborder="no" framespacing="0" allowfullscreen="">
+   <frame src="./UniversidadeVLI_files/blank.html" id="dummy" name="dummy" marginwidth="0" marginheight="0" border="0" frameborder="no" framespacing="0">
+   <frame src="./UniversidadeVLI_files/blank(1).html" id="apiadapterframe" name="apiadapterframe" marginwidth="0" marginheight="0" border="0" frameborder="no" framespacing="0">
+   <frame src="./UniversidadeVLI_files/verifica.html" name="online" marginwidth="0" marginheight="0" border="0" frameborder="no" framespacing="0">
+   <frame src="./UniversidadeVLI_files/lmsscoframe.html" id="LMSSCOFrame" name="LMSSCOFrame" marginwidth="0" marginheight="0" border="0" frameborder="no" framespacing="0">
+</frameset>
+<noframes>aaa</noframes>
+
+
+
+
+
+</html>
